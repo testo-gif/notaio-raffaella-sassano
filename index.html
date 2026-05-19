@@ -10,7 +10,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--navy:#1a2744;--gold:#c9a84c;--gold-light:#e8c96a;--cream:#faf8f3;--text:#2d3748}
-body{font-family:'Inter',sans-serif;color:var(--text);background:#fff}
+body{font-family:'Inter',sans-serif;color:var(--text);background:#fff;padding-top:40px}
 
 /* HERO */
 .hero{position:relative;height:100vh;min-height:580px;background:var(--navy);display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -85,9 +85,11 @@ nav.scrolled{background:var(--navy);box-shadow:0 2px 20px rgba(0,0,0,0.3)}
 .contact-value a{color:var(--gold);text-decoration:none}
 
 /* BANNER */
-.banner{background:linear-gradient(135deg,var(--navy),#2c3e6e);padding:80px 24px;text-align:center;color:#fff}
-.banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.6rem);font-weight:600;margin-bottom:16px}
-.banner p{color:rgba(255,255,255,0.7);margin-bottom:32px;font-size:16px}
+#buy-banner{position:fixed;top:0;left:0;width:100%;background:#000;color:#fff;z-index:9999;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+#buy-banner p{font-size:14px;margin:0}
+#buy-banner a.stripe{background:#ff4d00;color:#fff;text-decoration:none;padding:8px 18px;border-radius:4px;font-size:13px;font-weight:500;white-space:nowrap;flex-shrink:0}
+@media(max-width:600px){#buy-banner .dt{display:none}}
+@media(min-width:601px){#buy-banner .mob{display:none}}
 
 /* FOOTER */
 footer{background:#111827;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
@@ -123,7 +125,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-urXpFWVZxSbMcnlPynNjHgBJ8P-66k14Q3qIOdw8yX8NlAHkUwhfzCc-sBH4lNeZndITH3pNajfQ3DGqej3jEhfv5u4rW8xNcEVXpk34lA7fuDRWamVDDFuWjMu9NcrNCwQC_S6bawVPrRoYvXG7iSjyu4h1ff1ik_QYMP7zkdwmfVmLQhjnnca43eCGbxbxbxpjIDBgmkLDYPTj7uAUT2rpQwPDVO2krwMDsXBtUAfYF-eog8WrIMkXjR8o4U__rmGNXw_osC0M1tTIxISU0obdipPYoUNK73dxAWf70DlQ&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Notaio Raffaella Sassano" style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
+  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-vqoM96NzylW2SpV_PWwaC20vC_FC0d4IMl9zFIESRd7p_YjhSMOoCet15gLFigvefcpQgkhyATtnKXKXYn4Fr-papNG2A-vD0wrv1Xs0NTBKDmF-LMQ9HnTlJfHgCRCTQuMtMbkGezYT49iFis9ePttSJfyBEy3OxtpQj3KJBMjvyTcvCkbZkaZz0pL4R_-m07goKqIPFS5jZ7Xhl4vom1XbJ0k2rrptQWfF8b2sFMj6HjnT5MoaK4I1vm7x8JHjyAl0mweRW32AKZbXITDLoCrWR0ZUb85Ko9JC8hXVHv4A&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Notaio Raffaella Sassano" style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">Notaio · Bologna</div>
@@ -150,7 +152,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
         </div>
       </div>
       <div class="about-img">
-        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-uP1r651Xc0pKGNlcuxcdFfa1cmzbb9NzR4xXQK82yJQFsgMTk2AMI-vD3E-7rAhz3ugXq6TEMGR4j0fyfd1ebOmWoHNvXQ3P2GjiCX_4Lmt9RRfQXYob8FqP0ERwtGHduCpx0kRUp_fsZ9V_vdQGrsiNsQAfU4-HB0AJhQaQhnyfB0li8QZHg3Xedy2ySDdCS1eje2xe3TjlQrfKJqgq5fSiEK8mFHEbN0fPaCIaUHAhpzXpvX-hz7WHO_Axv0fiWB7Izhm5N2pouvBkqKutnlHKgyijKOnOvPIIYqB6JABDt15ZD_8Q39Mq98m0q3ur5SXFOivp-gKF-IxROQOArBua9D3Zidg1RD5FPaydsp3GdNfwjXL-6xSBgjlEoyWzf3ictPIvNF7GGs29W0EdFgNg9kzOVNfDMQMxGVm5cuOS1d&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Notaio Raffaella Sassano">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-t_ngfpiIW8NhbUvc6_fQrDKH_BO9NFz_BFlzEf2-1YiKPRp83Pvoj76XCRiE6XKjMfiDGDBgj3seSUt00p2qRKtA_k1XeQsxRGqNF5Zbz-dakD_t0IjVvl9mlekmi9iZ2u7uzp7LJteL5XkOX2yj5Ym_j8OIR-w3xjb6Q1drhevemy19NdmAEg2r-lg5uBO226C_T95QUH_3jtORHDGwh8twv_iRKLvMBSdd6VDObQtZg78_ulAmN9yIXsEDzaIv-4c0TqzRNIUd6coNIJl2tN1hqblzN-cfaHdCYCdaPOXwq0Sms7Y8Z5_3ujZSIPDtt3IN9kORz7OFBfWSlJnF32GyYH_1ODUMS0KoRwyVzWKDBFR9Z7d3p50irHfouBqju3mcAGAivd3egCzL9tO94x3CSLM1wsndR4aHnpIZF96f5J&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Notaio Raffaella Sassano">
       </div>
     </div>
   </div>
@@ -160,7 +162,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
   <div class="container">
     <h2 class="section-title">Servizi offerti</h2>
     <div class="services-grid"><div class="service-item"><div class="service-icon">⚖</div><span>Atti notarili</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Compravendite</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Successioni</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Donazioni</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Costituzione società</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Contratti</span></div></div>
-    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-uP1r651Xc0pKGNlcuxcdFfa1cmzbb9NzR4xXQK82yJQFsgMTk2AMI-vD3E-7rAhz3ugXq6TEMGR4j0fyfd1ebOmWoHNvXQ3P2GjiCX_4Lmt9RRfQXYob8FqP0ERwtGHduCpx0kRUp_fsZ9V_vdQGrsiNsQAfU4-HB0AJhQaQhnyfB0li8QZHg3Xedy2ySDdCS1eje2xe3TjlQrfKJqgq5fSiEK8mFHEbN0fPaCIaUHAhpzXpvX-hz7WHO_Axv0fiWB7Izhm5N2pouvBkqKutnlHKgyijKOnOvPIIYqB6JABDt15ZD_8Q39Mq98m0q3ur5SXFOivp-gKF-IxROQOArBua9D3Zidg1RD5FPaydsp3GdNfwjXL-6xSBgjlEoyWzf3ictPIvNF7GGs29W0EdFgNg9kzOVNfDMQMxGVm5cuOS1d&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-vxpV7-QJ7of2ddDktKZhPNOiMrUAVmK8WoSP9QZGNQJw-n079_ZijyUfJYAZhHq1CGKkmpjHOlB-s7PdP4pyB0JFar8yYYPYoNOnfy5w04oA1bXlr2vEpFE4E7_QNvCg0VfnS_tU9jpHSZ79PBWSnpbGKmW6Kz7DJepYWY4Cg_smayiweW-XrwosA83AHO4Ory7D6TS00BvVQO_waAZtrw9CWRwK-fzLMqCa3UNu3f6Rl9aJUxAvy_MkjblKwWKJ1unPXpIiUANV6rjPthquugbOv-V3DUjD4g1fY2CTUmfA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-tUAD8ffZVkoJwRigeK7yJzE1MYTM6GyJcgU1oJZc-PyFpCPQ6MO_qfn-tkc2LUApESI8LG5CDS56UgcP-Hzo-0jOsiPvs4kkrFVfrc8AiqdvKMrXG9_vlR6h8w2hxg--IvMfbhK06ypWXrX5KwBP3F-2fn-dkOTAKNfkjGDk6WhP5qFGWEXz8Vb_L9aRpbmt9cbTlaJwDKg7U1MKSc-FDK_-sWJReeOAYNAWFFv--jWqPfL7ehYYwAI0dDADdwyCZNaRHeBqX78x5lAKRqV5rlX_mzEpsybg3f8guU0k9YnA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-veKM6sPhonu_liEqI1v4CPlLwfKfpd930vUyM19lfUMHE5fzria7gtouAh1t8mekGAsEsE68VDJm17Bbv5X3Ri-KLQKhNcaNLnfB47yPlD7S3Cu4gOKiktIgKDb1mPRrL1w6MZX6GAwATT9rvRCV4NM0GbWaHFs8eazF3l8UL2olyjqFwcHv9yYw_C5K9YsdFPboo4Bin77IGY3hT0fTAdcJ4v-sYTSi7a_oPqZmCHxGjsdKNqLjeneHYUKJD-xSVSwz-kkqNil4buCD6xaUjZaCb_1iSXI5wlKExVkmUmuQ&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
+    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-t_ngfpiIW8NhbUvc6_fQrDKH_BO9NFz_BFlzEf2-1YiKPRp83Pvoj76XCRiE6XKjMfiDGDBgj3seSUt00p2qRKtA_k1XeQsxRGqNF5Zbz-dakD_t0IjVvl9mlekmi9iZ2u7uzp7LJteL5XkOX2yj5Ym_j8OIR-w3xjb6Q1drhevemy19NdmAEg2r-lg5uBO226C_T95QUH_3jtORHDGwh8twv_iRKLvMBSdd6VDObQtZg78_ulAmN9yIXsEDzaIv-4c0TqzRNIUd6coNIJl2tN1hqblzN-cfaHdCYCdaPOXwq0Sms7Y8Z5_3ujZSIPDtt3IN9kORz7OFBfWSlJnF32GyYH_1ODUMS0KoRwyVzWKDBFR9Z7d3p50irHfouBqju3mcAGAivd3egCzL9tO94x3CSLM1wsndR4aHnpIZF96f5J&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-tLLi7aF9TdElD4jGEk7qWtqXU2Em_jS1bXrYXhS4q7NyNJ14Dr2O4MfowrS1OHv24vB6I_9E6XQ607SP7dt1UUapZ3UTB27AhHn622GwJVIAVsXIyUTkIEpokQ902rxuwA7gtscqquhjKepVn-xIAMTfRT1AQALx-6oqiJ5TVJiflqTjIkElJDfTUTSuxaG7qf8snRruAV2dwfRCg4i3sdiysI_Pt3Sc-TNUmkUMIvdUdhylEqvOSFwsC4Gds8v9mU_wzFv2d9REouja37fpbb2lH7pKA4vnUQI-Q0wkjL8Q&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-shM0iGagYS0n_13PqMEN-RDFUp9hb6Z0PfWJLf43aeoWV8y4PGpDHuCa8TEkPmgcPbkPSt_c5LujgjNkucFVnwp2uNYB0W1-Rwpg596LX7JXyp8tbIQzEa6hke_LtW6oAmLIJ2WPOyv7Zx-RMNdubPuLuVBylIMZZwJcnygCJS4ZlXSZHGteKeilisobhRWgbnMFxrcMrWrzePLn3FH-K-ZkQpl3PIe8W0sFj09URHMfmbwaliXDKi0qt2flppYp2xa0LinllPNdJwUyEPEs00j7n_pgk__qGcauEWCgYaFg&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-uSf1qeTRkwExdtr3PnrODunUJVpz7kS2o60sjjiZoNQ6CMYgF-Gc6tQ9ZKuRLND263xVOBvoqLWOlNCfJwRp8HFCw5mM5Rc4F5uTFkLEjMJMTVl_zxnc9Kc_T06hUAuALsrat3BGg_gpAl6i9dVNKMSZ4l8TuRvINV8BrVSqRQi22JOKPgDFeNN7BxwXcJUdY651rVHY4BZqkkEAn4rOhRWkdz7JH2b8oUJLM8kckZlO9FOiSIltrWfQOzl-ciny6pN1Oy6DkOaZJWacDPuhGKhAG5OD_5BRC2CesaU0I1fQ&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
   </div>
 </section>
 
@@ -286,16 +288,19 @@ Fin dal primo contatto con lo studio notarile, ho avuto modo di apprezzare la pr
       <div class="contact-card"><div class="contact-icon">📞</div><div class="contact-label">Telefono</div><div class="contact-value"><a href="tel:+39 051 468 1111">+39 051 468 1111</a></div></div>
       <div class="contact-card"><div class="contact-icon">📍</div><div class="contact-label">Indirizzo</div><div class="contact-value">Via S. Petronio Vecchio,  6, 40125 Bologna</div></div>
       <div class="contact-card"><div class="contact-icon">🏛</div><div class="contact-label">Specializzazione</div><div class="contact-value">Notaio</div></div>
+      <div class="contact-card" style="text-align:left">
+  <div class="contact-icon" style="text-align:center">🕐</div>
+  <div class="contact-label" style="text-align:center;margin-bottom:12px">Orari</div>
+  <table style="font-size:13px;width:100%"><tr><td style="padding:5px 16px 5px 0;">Lunedì</td><td style="color:rgba(255,255,255,0.8);">09–13 / 14:30–18:30</td></tr><tr><td style="padding:5px 16px 5px 0;font-weight:700;color:var(--gold)">Martedì</td><td style="color:#fff;font-weight:700;color:var(--gold)">09–13 / 14:30–18:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Mercoledì</td><td style="color:rgba(255,255,255,0.8);">09–13 / 14:30–18:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Giovedì</td><td style="color:rgba(255,255,255,0.8);">09–13 / 14:30–18:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Venerdì</td><td style="color:rgba(255,255,255,0.8);">10–16</td></tr><tr><td style="padding:5px 16px 5px 0;">Sabato</td><td style="color:#e53e3e;">Chiuso</td></tr><tr><td style="padding:5px 16px 5px 0;">Domenica</td><td style="color:#e53e3e;">Chiuso</td></tr></table>
+</div>
     </div>
   </div>
 </section>
 
-<div class="banner">
-  <div class="container">
-    <h2>Vuoi un sito come questo per il tuo studio?</h2>
-    <p>Simplo crea siti web professionali in 24 ore per studi legali, notai e professionisti.</p>
-    <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" class="btn-primary">Scopri Simplo →</a>
-  </div>
+<div id="buy-banner">
+  <p class="dt">Ti piace questo sito? Il tuo potrebbe essere identico — online in 5 giorni per €99</p>
+  <p class="mob">Vuoi un sito così? €99</p>
+  <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" target="_blank" class="stripe">Inizia ora →</a>
 </div>
 
 <footer>
